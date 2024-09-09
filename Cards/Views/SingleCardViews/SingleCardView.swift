@@ -12,23 +12,27 @@ struct SingleCardView: View {
     @State private var currentModal: ToolbarSelection?
     var body: some View {
         NavigationStack {
-            Color.yellow
-                .toolbar {
-                    ToolbarItem(placement: .bottomBar) {
-                        BottomToolbar(modal: $currentModal)
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Done") {
-                            dismiss()
-                        }
-                    }
-                }
-                .sheet(item: $currentModal) { item in
-                    switch item {
-                    default:
-                        Text(String(describing: item))
-                    }
-                }
+            content
+                .cardToolbar(modal: $currentModal)
+        }
+    }
+    
+    var content : some View {
+        ZStack {
+            Group {
+                Capsule()
+                    .foregroundColor(.yellow)
+                Text("Resize Me!")
+                    .fontWeight(.bold)
+                    .font(.system(size: 500))
+                    .minimumScaleFactor(0.01)
+                    .lineLimit(1)
+            }
+            .resizableView()
+            
+            Circle()
+                .resizableView()
+                .offset(CGSize(width: 50.0, height: 200.0))
         }
     }
 }
