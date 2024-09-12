@@ -22,7 +22,12 @@ struct ImageElement: CardElement {
     var id: UUID = UUID()
     
     var transform = Transform()
-    var image: Image
+    
+    var image: Image {
+        Image(uiImage: uiImage ?? UIImage.error)
+    }
+    
+    var uiImage: UIImage? = nil
 }
 
 struct TextElement: CardElement {

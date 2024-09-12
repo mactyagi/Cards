@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321C678E2C8F5A6400F30933 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C678D2C8F5A6400F30933 /* CardDetailView.swift */; };
+		321C67902C8F65E900F30933 /* CardElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C678F2C8F65E900F30933 /* CardElementView.swift */; };
 		325966112C8C4BCF0031CA69 /* CardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325966102C8C4BCF0031CA69 /* CardElement.swift */; };
 		325966132C8C4C9E0031CA69 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325966122C8C4C9E0031CA69 /* Card.swift */; };
 		325966152C8C4CF50031CA69 /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325966142C8C4CF50031CA69 /* CardStore.swift */; };
@@ -27,9 +29,13 @@
 		32D4889E2C8B013300546138 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4889D2C8B013300546138 /* Transform.swift */; };
 		32D488A12C8B065500546138 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D488A02C8B065500546138 /* Operators.swift */; };
 		32D488A42C8B709E00546138 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D488A32C8B709E00546138 /* Setting.swift */; };
+		DAD11D502C92E13400D33B51 /* Stickers in Resources */ = {isa = PBXBuildFile; fileRef = DAD11D4F2C92E13400D33B51 /* Stickers */; };
+		DAD11D532C92E1D300D33B51 /* StickerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD11D522C92E1D300D33B51 /* StickerModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321C678D2C8F5A6400F30933 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		321C678F2C8F65E900F30933 /* CardElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardElementView.swift; sourceTree = "<group>"; };
 		325966102C8C4BCF0031CA69 /* CardElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardElement.swift; sourceTree = "<group>"; };
 		325966122C8C4C9E0031CA69 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		325966142C8C4CF50031CA69 /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
@@ -51,6 +57,9 @@
 		32D4889D2C8B013300546138 /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		32D488A02C8B065500546138 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		32D488A32C8B709E00546138 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		DAD11D442C92DBED00D33B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DAD11D4F2C92E13400D33B51 /* Stickers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Stickers; path = "../../SwiftUI Apprentice/suia-materials-editions-2.0/16-adding-assets-to-your-app/assets/Stickers"; sourceTree = "<group>"; };
+		DAD11D522C92E1D300D33B51 /* StickerModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +101,11 @@
 		32D488802C8AA5CF00546138 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				DAD11D442C92DBED00D33B51 /* Info.plist */,
 				32CED3142C8C1D9400D74F92 /* Extensions */,
 				32D488A22C8B708F00546138 /* Config */,
 				32D488812C8AA5CF00546138 /* CardsApp.swift */,
+				DAD11D4F2C92E13400D33B51 /* Stickers */,
 				32D488992C8AF26B00546138 /* Views */,
 				32D488852C8AA5D100546138 /* Assets.xcassets */,
 				32D488872C8AA5D100546138 /* Preview Content */,
@@ -129,9 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				32D488932C8AA8C100546138 /* SingleCardView.swift */,
+				DAD11D512C92E1B400D33B51 /* Card Modal Views */,
 				32D488972C8AAE7200546138 /* BottomToolbar.swift */,
 				32D488952C8AAE2A00546138 /* ToolbarSelection.swift */,
 				32CED3172C8C208500D74F92 /* CardToolbar.swift */,
+				321C678D2C8F5A6400F30933 /* CardDetailView.swift */,
+				321C678F2C8F65E900F30933 /* CardElementView.swift */,
 			);
 			path = SingleCardViews;
 			sourceTree = "<group>";
@@ -153,6 +167,14 @@
 				32D488A32C8B709E00546138 /* Setting.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		DAD11D512C92E1B400D33B51 /* Card Modal Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAD11D522C92E1D300D33B51 /* StickerModal.swift */,
+			);
+			path = "Card Modal Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32D488892C8AA5D100546138 /* Preview Assets.xcassets in Resources */,
+				DAD11D502C92E13400D33B51 /* Stickers in Resources */,
 				32D488862C8AA5D100546138 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321C678E2C8F5A6400F30933 /* CardDetailView.swift in Sources */,
 				325966112C8C4BCF0031CA69 /* CardElement.swift in Sources */,
+				DAD11D532C92E1D300D33B51 /* StickerModal.swift in Sources */,
 				32D488922C8AA82F00546138 /* CardThumbnail.swift in Sources */,
 				32D488A12C8B065500546138 /* Operators.swift in Sources */,
 				32CED3182C8C208500D74F92 /* CardToolbar.swift in Sources */,
@@ -239,6 +264,7 @@
 				32D488A42C8B709E00546138 /* Setting.swift in Sources */,
 				32D488962C8AAE2A00546138 /* ToolbarSelection.swift in Sources */,
 				32D488982C8AAE7200546138 /* BottomToolbar.swift in Sources */,
+				321C67902C8F65E900F30933 /* CardElementView.swift in Sources */,
 				32D4889E2C8B013300546138 /* Transform.swift in Sources */,
 				325966152C8C4CF50031CA69 /* CardStore.swift in Sources */,
 				32D488822C8AA5CF00546138 /* CardsApp.swift in Sources */,
@@ -379,9 +405,9 @@
 				DEVELOPMENT_TEAM = F638V29VVL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -408,9 +434,9 @@
 				DEVELOPMENT_TEAM = F638V29VVL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
