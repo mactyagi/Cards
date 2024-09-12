@@ -16,9 +16,14 @@ struct CardToolbar: ViewModifier {
     func body(content: Content) -> some View {
         content
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
-                BottomToolbar(modal: $currentModal)
+            ToolbarItem(placement: .navigationBarTrailing) {
+                menu
             }
+            
+            ToolbarItem(placement: .bottomBar) {
+                BottomToolbar(modal: $currentModal, card: $card)
+            }
+            
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Done") {
                     dismiss()
@@ -38,6 +43,32 @@ struct CardToolbar: ViewModifier {
             default:
                 Text(String(describing: item))
             }
+        }
+    }
+    
+    var menu: some View {
+        Menu {
+            Button(action: {
+                if UIPasteboard.general.hasImages {
+                    if let images =  UIPasteboard.general.images {
+                        for image in images {
+                            card.addElement(uiImage: image)
+                        }
+                    }
+                }else if UIPasteboard.general.hasStrings {
+                    if let strings = UIPasteboard.general.strings {
+                        for text in strings {
+                            card.addElement(text: TextElement(text: text))
+                        }
+                    }
+                }
+            }, label: {
+                Label("Paste", systemImage: "doc.on.clipboard")
+            })
+            .disabled(!UIPasteboard.general.hasImages && !UIPasteboard.general.hasStrings)
+            
+        } label: {
+            Label("Add", systemImage: "ellipsis.circle")
         }
     }
 }

@@ -29,6 +29,7 @@ struct CardsListView: View {
             
             ForEach(store.cards) { card in
                 CardThumbnail(card: card)
+                    .cardContextMenu(card: card)
               .onTapGesture {
                 selectedCard = card
               }
