@@ -20,7 +20,7 @@ extension CardElement {
 
 struct ImageElement: CardElement {
     var id: UUID = UUID()
-    
+    var frameIndex: Int?
     var transform = Transform()
     
     var image: Image {

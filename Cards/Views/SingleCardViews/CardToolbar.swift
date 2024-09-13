@@ -10,6 +10,8 @@ import SwiftUI
 struct CardToolbar: ViewModifier {
     @Binding var currentModal: ToolbarSelection?
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var store: CardStore
+    @State private var frameIndex: Int?
     @Binding var card: Card
     @State private var stickerImage: UIImage?
     
@@ -39,6 +41,15 @@ struct CardToolbar: ViewModifier {
                             card.addElement(uiImage: stickerImage)
                         }
                         stickerImage = nil
+                    }
+            case .frameModal:
+                FrameModal(frameIndex: $frameIndex)
+                    .onDisappear {
+                        if let frameIndex {
+                            // update card
+                            card.update(store.selectedElement, frameIndex: frameIndex)
+                        }
+                        frameIndex = nil
                     }
             default:
                 Text(String(describing: item))

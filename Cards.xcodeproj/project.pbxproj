@@ -36,6 +36,8 @@
 		DAD11D5A2C936B0F00D33B51 /* CustomTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD11D592C936B0F00D33B51 /* CustomTransfer.swift */; };
 		DAD11D5C2C937C1900D33B51 /* ElementContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD11D5B2C937C1900D33B51 /* ElementContextMenu.swift */; };
 		DAD11D5E2C93825700D33B51 /* CardContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD11D5D2C93825700D33B51 /* CardContextMenu.swift */; };
+		DAD11D822C9419A000D33B51 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD11D812C9419A000D33B51 /* Shapes.swift */; };
+		DAD11D842C94547400D33B51 /* FrameModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD11D832C94547400D33B51 /* FrameModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		DAD11D592C936B0F00D33B51 /* CustomTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransfer.swift; sourceTree = "<group>"; };
 		DAD11D5B2C937C1900D33B51 /* ElementContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementContextMenu.swift; sourceTree = "<group>"; };
 		DAD11D5D2C93825700D33B51 /* CardContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContextMenu.swift; sourceTree = "<group>"; };
+		DAD11D812C9419A000D33B51 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		DAD11D832C94547400D33B51 /* FrameModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 			children = (
 				DAD11D522C92E1D300D33B51 /* StickerModal.swift */,
 				DAD11D552C9349EB00D33B51 /* PhotoModal.swift */,
+				DAD11D812C9419A000D33B51 /* Shapes.swift */,
+				DAD11D832C94547400D33B51 /* FrameModal.swift */,
 			);
 			path = "Card Modal Views";
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 				32D488842C8AA5CF00546138 /* ContentView.swift in Sources */,
 				32CED31E2C8C3EFA00D74F92 /* TextExtensions.swift in Sources */,
 				DAD11D5C2C937C1900D33B51 /* ElementContextMenu.swift in Sources */,
+				DAD11D822C9419A000D33B51 /* Shapes.swift in Sources */,
 				325966132C8C4C9E0031CA69 /* Card.swift in Sources */,
 				32CED31C2C8C3ECA00D74F92 /* PreviewData.swift in Sources */,
 				32D4889C2C8B008F00546138 /* ResizableView.swift in Sources */,
@@ -281,6 +288,7 @@
 				32D488942C8AA8C100546138 /* SingleCardView.swift in Sources */,
 				DAD11D5E2C93825700D33B51 /* CardContextMenu.swift in Sources */,
 				32D488A42C8B709E00546138 /* Setting.swift in Sources */,
+				DAD11D842C94547400D33B51 /* FrameModal.swift in Sources */,
 				32D488962C8AAE2A00546138 /* ToolbarSelection.swift in Sources */,
 				32D488982C8AAE7200546138 /* BottomToolbar.swift in Sources */,
 				321C67902C8F65E900F30933 /* CardElementView.swift in Sources */,

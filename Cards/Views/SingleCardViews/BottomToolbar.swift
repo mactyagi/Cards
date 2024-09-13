@@ -31,26 +31,34 @@ struct ToolbarButton: View {
 
 struct BottomToolbar: View {
     @Binding var modal: ToolbarSelection?
+    @EnvironmentObject var store: CardStore
     @Binding var card: Card
     var body: some View {
         HStack {
             ForEach(ToolbarSelection.allCases) { selection in
                 switch selection {
                 case .photoModal:
-                    Button {
-                        
-                    } label: {
+                    Button {} label: {
                         PhotoModal(card: $card)
                     }
-                    
+                case .frameModal:
+                    defaultButton(selection)
+                        .disabled(
+                            store.selectedElement == nil ||
+                            !(store.selectedElement is ImageElement)
+                        )
                 default:
-                    Button{
-                        modal = selection
-                    } label: {
-                        ToolbarButton(modal: selection)
-                    }
+                    defaultButton(selection)
                 }
             }
+        }
+    }
+    
+    func defaultButton(_ selection: ToolbarSelection) -> some View {
+        Button {
+            modal = selection
+        } label: {
+            ToolbarButton(modal: selection)
         }
     }
 }
@@ -58,4 +66,5 @@ struct BottomToolbar: View {
 #Preview {
     BottomToolbar(modal: .constant(.textModal),
                   card: .constant(Card()))
+    .environmentObject(CardStore())
 }
