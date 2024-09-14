@@ -19,9 +19,7 @@ struct CardDetailView: View {
             
             ForEach($card.elements, id: \.id) { $element in
                     CardElementView(element: element)
-                    .border(
-                        Settings.borderColor,
-                        width: isSelected(element) ? Settings.borderWidth : 0)
+                        .overLay(element: element, isSelected: isSelected(element))
                 
                     .elementContextMenu(card: $card, element: $element)
                     .resizableView(transform: $element.transform)
@@ -64,5 +62,25 @@ struct CardDetailView_Previews: PreviewProvider {
     }
     
 }
+
+extension CardElementView {
+    @ViewBuilder
+    func overLay(element: CardElement, isSelected: Bool) -> some View {
+        if let element = element as?  ImageElement, isSelected{
+            if let frameIndex = element.frameIndex {
+                let shape = Shapes.shapes[frameIndex]
+                self
+                    .overlay(shape.stroke(Settings.borderColor, lineWidth: Settings.borderWidth))
+            }else {
+                self
+                    .border(Settings.borderColor, width: Settings.borderWidth)
+            }
+        }else {
+            self
+        }
+    }
+}
+
+
 
 

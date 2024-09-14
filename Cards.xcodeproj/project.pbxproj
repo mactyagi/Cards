@@ -170,6 +170,7 @@
 		32D4889F2C8B013900546138 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DAD11D812C9419A000D33B51 /* Shapes.swift */,
 				32D4889D2C8B013300546138 /* Transform.swift */,
 				325966142C8C4CF50031CA69 /* CardStore.swift */,
 				325966102C8C4BCF0031CA69 /* CardElement.swift */,
@@ -192,7 +193,6 @@
 			children = (
 				DAD11D522C92E1D300D33B51 /* StickerModal.swift */,
 				DAD11D552C9349EB00D33B51 /* PhotoModal.swift */,
-				DAD11D812C9419A000D33B51 /* Shapes.swift */,
 				DAD11D832C94547400D33B51 /* FrameModal.swift */,
 			);
 			path = "Card Modal Views";
