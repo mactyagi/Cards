@@ -15,6 +15,9 @@ struct SingleCardView: View {
         NavigationStack {
             CardDetailView(card: $card)
                 .cardToolbar(modal: $currentModal, card: $card)
+                .onDisappear {
+                    card.save()
+                }
         }
     }
 }

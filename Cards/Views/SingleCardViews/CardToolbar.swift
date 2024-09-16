@@ -14,6 +14,7 @@ struct CardToolbar: ViewModifier {
     @State private var frameIndex: Int?
     @Binding var card: Card
     @State private var stickerImage: UIImage?
+    @State private var textElement: TextElement = TextElement()
     
     func body(content: Content) -> some View {
         content
@@ -51,6 +52,13 @@ struct CardToolbar: ViewModifier {
                         }
                         frameIndex = nil
                     }
+            case .textModal:
+                TextModal(textElement: $textElement)
+                    .onDisappear {
+                        if !textElement.text.isEmpty {
+                            card.addElement(textElement: textElement)
+                        }
+                    }
             default:
                 Text(String(describing: item))
             }
@@ -69,7 +77,7 @@ struct CardToolbar: ViewModifier {
                 }else if UIPasteboard.general.hasStrings {
                     if let strings = UIPasteboard.general.strings {
                         for text in strings {
-                            card.addElement(text: TextElement(text: text))
+                            card.addElement(textElement: TextElement(text: text))
                         }
                     }
                 }
