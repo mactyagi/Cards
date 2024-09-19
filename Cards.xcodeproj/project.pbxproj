@@ -29,6 +29,7 @@
 		32D4889E2C8B013300546138 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4889D2C8B013300546138 /* Transform.swift */; };
 		32D488A12C8B065500546138 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D488A02C8B065500546138 /* Operators.swift */; };
 		32D488A42C8B709E00546138 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D488A32C8B709E00546138 /* Setting.swift */; };
+		DA7827112C9C1E69004BCB66 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7827102C9C1E69004BCB66 /* LayoutView.swift */; };
 		DAD11D502C92E13400D33B51 /* Stickers in Resources */ = {isa = PBXBuildFile; fileRef = DAD11D4F2C92E13400D33B51 /* Stickers */; };
 		DAD11D532C92E1D300D33B51 /* StickerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD11D522C92E1D300D33B51 /* StickerModal.swift */; };
 		DAD11D562C9349EB00D33B51 /* PhotoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD11D552C9349EB00D33B51 /* PhotoModal.swift */; };
@@ -66,6 +67,7 @@
 		32D4889D2C8B013300546138 /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		32D488A02C8B065500546138 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		32D488A32C8B709E00546138 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		DA7827102C9C1E69004BCB66 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
 		DAD11D442C92DBED00D33B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DAD11D4F2C92E13400D33B51 /* Stickers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Stickers; path = ../Stickers; sourceTree = "<group>"; };
 		DAD11D522C92E1D300D33B51 /* StickerModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerModal.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				32D488832C8AA5CF00546138 /* ContentView.swift */,
+				DA7827102C9C1E69004BCB66 /* LayoutView.swift */,
 				32D4889F2C8B013900546138 /* Model */,
 				32D4889B2C8B008F00546138 /* ResizableView.swift */,
 				32D488A02C8B065500546138 /* Operators.swift */,
@@ -285,6 +288,7 @@
 				DAD11D582C93678700D33B51 /* UIImageExtensions.swift in Sources */,
 				32D488842C8AA5CF00546138 /* ContentView.swift in Sources */,
 				32CED31E2C8C3EFA00D74F92 /* TextExtensions.swift in Sources */,
+				DA7827112C9C1E69004BCB66 /* LayoutView.swift in Sources */,
 				DAD11D5C2C937C1900D33B51 /* ElementContextMenu.swift in Sources */,
 				DAD11D822C9419A000D33B51 /* Shapes.swift in Sources */,
 				325966132C8C4C9E0031CA69 /* Card.swift in Sources */,
