@@ -83,6 +83,7 @@ struct CardsListView: View {
         .font(.system(size: 16, weight: .bold))
         .padding([.top, .bottom], 10)
         .background(Color.bar)
+        .accentColor(.white)
         
     }
     

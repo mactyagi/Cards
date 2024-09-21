@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ToolbarButton: View {
     let modal: ToolbarSelection
+    @Environment(\.verticalSizeClass) var verticalSizeClass
     private let modalButton: [ToolbarSelection: (text: String, imageName: String)] = [
         .photoModal : ("Photos","photo"),
         .frameModal : ("Frames", "square.on.circle"),
@@ -21,7 +22,10 @@ struct ToolbarButton: View {
             VStack{
                 Image(systemName: imageName)
                     .font(.largeTitle)
-                Text(text)
+                if verticalSizeClass == .regular{
+                    Text(text)
+                }
+                
             }
             .padding(.top)
         }
@@ -34,7 +38,7 @@ struct BottomToolbar: View {
     @EnvironmentObject var store: CardStore
     @Binding var card: Card
     var body: some View {
-        HStack {
+        HStack(alignment: .bottom) {
             ForEach(ToolbarSelection.allCases) { selection in
                 switch selection {
                 case .photoModal:

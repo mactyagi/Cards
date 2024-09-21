@@ -12,28 +12,32 @@ struct Card: Identifiable {
     var backgroundColor:Color = .yellow
     var elements:[CardElement] = []
     
-    mutating func addElement(uiImage: UIImage) {
+    mutating func addElement(uiImage: UIImage, transform: Transform = Transform()) {
         let imageFileName = uiImage.save()
+        print(transform.offset)
+        print("This is off set")
         let element = ImageElement(
-            imageFileName: imageFileName, 
+            transform: transform,
+            imageFileName: imageFileName,
             uiImage: uiImage)
-        
-        
         elements.append(element)
         save()
     }
     
-    mutating func addElement(textElement: TextElement) {
-        elements.append(textElement)
+    mutating func addElement(textElement: TextElement, transform: Transform = Transform()) {
+        var newTextElement = textElement
+        newTextElement.transform = transform
+        elements.append(newTextElement)
         save()
     }
     
-    mutating func addElements(from transfer: [CustomTransfer]) {
+    mutating func addElements(from transfer: [CustomTransfer], at offset: CGSize) {
         for element in transfer {
+            let transform = Transform(offset: offset)
             if let text = element.text {
-                addElement(textElement: TextElement(text: text))
+                addElement(textElement: TextElement(text: text), transform: transform)
             }else if let image = element.image {
-                addElement(uiImage: image)
+                addElement(uiImage: image, transform: transform)
             }
         }
     }

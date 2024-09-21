@@ -13,11 +13,19 @@ struct SingleCardView: View {
     @State private var currentModal: ToolbarSelection?
     var body: some View {
         NavigationStack {
-            CardDetailView(card: $card)
-                .cardToolbar(modal: $currentModal, card: $card)
-                .onDisappear {
-                    card.save()
+            GeometryReader { proxy in
+                CardDetailView(card: $card, proxy: proxy)
+                    .frame(
+                        width: Settings.calculateSize(proxy.size).width,
+                        height: Settings.calculateSize(proxy.size).height)
+                    .clipped()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                    .cardToolbar(modal: $currentModal, card: $card)
+                    .onDisappear {
+                        card.save()
                 }
+            }
         }
     }
 }

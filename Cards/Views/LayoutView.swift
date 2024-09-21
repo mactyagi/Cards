@@ -9,15 +9,21 @@ import SwiftUI
 
 struct LayoutView: View {
     var body: some View {
-        HStack {
-            Text("hello world!")
-                .background(Color.red)
-            Text("Hello World!")
-                .padding()
-                .background(Color.red)
+        GeometryReader { proxy in
+            HStack {
+                Text("hello world!")
+                    .background(Color.red)
+                Text("Hello World!")
+                    .padding()
+                    .background(Color.red)
+            }
+            .frame(width: proxy.size.width * 0.8)
+            .background(Color.gray)
+            .padding(
+                .leading, (proxy.size.width - proxy.size.width * 0.8) / 2
+            )
         }
-//        .frame(maxWidth: .infinity)
-        .background(Color.gray)
+        .background(Color.yellow)
     }
 }
 

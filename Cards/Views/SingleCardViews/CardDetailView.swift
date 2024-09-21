@@ -10,6 +10,12 @@ import SwiftUI
 struct CardDetailView: View {
     @EnvironmentObject var store: CardStore
     @Binding var card: Card
+    var proxy: GeometryProxy?
+    var viewScale: CGFloat  {
+        guard let proxy else { return 1}
+        return Settings.calculateScale(proxy.size)
+    }
+    
     var body: some View {
         ZStack {
             card.backgroundColor
@@ -22,7 +28,9 @@ struct CardDetailView: View {
                         .overLay(element: element, isSelected: isSelected(element))
                 
                     .elementContextMenu(card: $card, element: $element)
-                    .resizableView(transform: $element.transform)
+                    .resizableView(
+                        transform: $element.transform,
+                        viewScale: viewScale)
                     .frame(
                         width: element.transform.size.width,
                         height: element.transform.size.height)
@@ -37,7 +45,10 @@ struct CardDetailView: View {
         .dropDestination(for: CustomTransfer.self) { items, location in
             print(location)
             Task {
-                card.addElements(from:items)
+                let offset = Settings.calculateDropOffset(
+                  proxy: proxy,
+                  location: location)
+                card.addElements(from:items, at: offset)
             }
             return !items.isEmpty
         }
