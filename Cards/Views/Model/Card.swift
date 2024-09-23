@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Card: Identifiable {
     var id = UUID()
+    var uiImage: UIImage?
     var backgroundColor:Color = .yellow
     var elements:[CardElement] = []
     

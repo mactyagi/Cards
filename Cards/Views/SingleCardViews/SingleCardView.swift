@@ -23,6 +23,9 @@ struct SingleCardView: View {
                 
                     .cardToolbar(modal: $currentModal, card: $card)
                     .onDisappear {
+                        let image = UIImage.screenshot(card: card, size: Settings.cardSize)
+                        image.save(to: card.id.uuidString)
+                        card.uiImage = image
                         card.save()
                 }
             }

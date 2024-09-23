@@ -9,12 +9,18 @@ import SwiftUI
 
 struct TextModal: View {
     @Binding var textElement: TextElement
-    @Environment (\.dismiss) var dismiss
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        TextField("Enter Text", text: $textElement.text) {
-            dismiss()
+        VStack {
+            TextField("Enter Text", text: $textElement.text) {
+                dismiss()
+            }
+            .font(.custom(textElement.textFont, size: 30))
+            .fontWeight(.heavy)
+            .foregroundColor(textElement.textColor)
+            .padding(40)
+            TextView(font: $textElement.textFont, color: $textElement.textColor)
         }
-        .padding()
     }
 }
 

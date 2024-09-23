@@ -10,7 +10,14 @@ import SwiftUI
 struct CardThumbnail: View {
     let card: Card
     var body: some View {
-        card.backgroundColor
+        Group {
+            if let uiImage = UIImage.load(uuidString: card.id.uuidString) {
+                Image(uiImage: uiImage)
+                    .resizable()
+            }else {
+                card.backgroundColor
+            }
+        }
             .cornerRadius(10)
             .shadow(
                 color: .shadow,
