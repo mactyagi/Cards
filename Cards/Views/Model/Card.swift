@@ -12,9 +12,9 @@ struct Card: Identifiable {
     var backgroundColor:Color = .yellow
     var elements:[CardElement] = []
     
-    mutating func addElement(uiImage: UIImage, transform: Transform = Transform()) {
+    mutating func addElement(uiImage: UIImage, at offset: CGSize = .zero) {
         let imageFileName = uiImage.save()
-        print(transform.offset)
+        let transform = Transform(offset: offset)
         print("This is off set")
         let element = ImageElement(
             transform: transform,
@@ -24,7 +24,8 @@ struct Card: Identifiable {
         save()
     }
     
-    mutating func addElement(textElement: TextElement, transform: Transform = Transform()) {
+    mutating func addElement(textElement: TextElement, at offset: CGSize = .zero) {
+        let transform = Transform(offset: offset)
         var newTextElement = textElement
         newTextElement.transform = transform
         elements.append(newTextElement)
@@ -33,11 +34,10 @@ struct Card: Identifiable {
     
     mutating func addElements(from transfer: [CustomTransfer], at offset: CGSize) {
         for element in transfer {
-            let transform = Transform(offset: offset)
             if let text = element.text {
-                addElement(textElement: TextElement(text: text), transform: transform)
+                addElement(textElement: TextElement(text: text), at: offset)
             }else if let image = element.image {
-                addElement(uiImage: image, transform: transform)
+                addElement(uiImage: image, at: offset)
             }
         }
     }

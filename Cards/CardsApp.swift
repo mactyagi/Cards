@@ -12,7 +12,7 @@ struct CardsApp: App {
     @StateObject var store = CardStore()
     var body: some Scene {
         WindowGroup {
-            CardsListView()
+           AppLoadingView()
                 .environmentObject(store)
                 .onAppear{
                     print(URL.documentsDirectory)
