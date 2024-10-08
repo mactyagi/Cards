@@ -7,11 +7,7 @@ The Cards app enables users to design personalised cards by incorporating photos
 * Animation
 * UIPasteBoard
 
-## Feature
-- Fully implemented in SwiftUI.
-- 
-
-
+## App Previews
 <img src="https://github.com/user-attachments/assets/230f1aab-d39c-40b1-b820-68f741819fb6" width="400" title="Cards">
 <img src="https://github.com/user-attachments/assets/c0b4f218-beae-4011-a2fc-10573879b397" width="400" title="Cards"> 
 <img src="https://github.com/user-attachments/assets/4f75cd97-699e-4a8d-ae75-c0106dd0a5d6" width="400" title="Cards">
