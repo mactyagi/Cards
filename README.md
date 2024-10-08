@@ -1,9 +1,16 @@
+# Cards
 The Cards app enables users to design personalised cards by incorporating photos, shapes, stickers, and text. It also supports copying and pasting images directly from Safari, providing more flexibility in card creation. Users can share their completed cards easily with others.
 
+## Tech Stack
 * SwiftUI
 * UserDefaults
 * Animation
 * UIPasteBoard
+
+## Feature
+- Fully implemented in SwiftUI.
+- 
+
 
 <img src="https://github.com/user-attachments/assets/230f1aab-d39c-40b1-b820-68f741819fb6" width="400" title="Cards">
 <img src="https://github.com/user-attachments/assets/c0b4f218-beae-4011-a2fc-10573879b397" width="400" title="Cards"> 
