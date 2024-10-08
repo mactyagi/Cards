@@ -6,8 +6,11 @@ The Cards app enables users to design personalised cards by incorporating photos
 * UserDefaults
 * Animation
 * UIPasteBoard
+* iPadOS
 
 ## App Previews
+<img src="https://github.com/user-attachments/assets/09b4214a-9d2e-4085-bc19-0985c5fc006a" width="400" title="Cards">
+<img src="https://github.com/user-attachments/assets/13ab5117-ada2-4bb1-8af0-3a3bccef9a49" width="400" title="Cards">
 <img src="https://github.com/user-attachments/assets/230f1aab-d39c-40b1-b820-68f741819fb6" width="400" title="Cards">
 <img src="https://github.com/user-attachments/assets/c0b4f218-beae-4011-a2fc-10573879b397" width="400" title="Cards"> 
 <img src="https://github.com/user-attachments/assets/4f75cd97-699e-4a8d-ae75-c0106dd0a5d6" width="400" title="Cards">
